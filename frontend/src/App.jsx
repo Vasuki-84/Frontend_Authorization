@@ -2,8 +2,9 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 
 import Dashboard from "./pages/Dashboard";
-import Login from "./pages/login";
-import Register from "./pages/register";
+
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 import ProtectedRoutes from "./components/ProtectedRoutes";
 
 function App() {
@@ -14,9 +15,9 @@ function App() {
         <Route
           path="/dashboard"
           element={
-            <ProtectedRoutes>
+             <ProtectedRoutes>
               <Dashboard /> {/* children props in ProtectedRoutes component */}
-            </ProtectedRoutes>
+             </ProtectedRoutes> 
           }
         />
         <Route path="/register" element={<Register />} />
